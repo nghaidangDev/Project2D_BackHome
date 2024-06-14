@@ -9,6 +9,7 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField] private Image currentHealthImg;
     private float currentHealth = 100;
 
+
     private void Awake()
     {
         if (instance == null)
@@ -19,6 +20,7 @@ public class HealthBarUI : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     private void Start()
@@ -34,6 +36,6 @@ public class HealthBarUI : MonoBehaviour
 
     private void UpdateHealthCurrent()
     {
-            currentHealthImg.fillAmount = currentHealth / 100;
+        currentHealthImg.fillAmount = currentHealth / 100;
     }
 }

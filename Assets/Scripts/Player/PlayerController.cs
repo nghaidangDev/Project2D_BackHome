@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Coin"))
@@ -13,6 +20,10 @@ public class PlayerController : MonoBehaviour
         }else if (collision.gameObject.CompareTag("Trap"))
         {
             HealthBarUI.instance.TakeDamage(20);
+            if (anim != null)
+            {
+                anim.SetTrigger("hit");
+            }
         }
     }
 }

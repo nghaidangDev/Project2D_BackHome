@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    //double jump
+    private bool doubleJump;
+
     //Flip
     private bool isFacingRight;
 
@@ -43,9 +46,34 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jumping()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if (!Input.GetKey(KeyCode.Space) && isGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            doubleJump = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded() || doubleJump)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                anim.SetTrigger("jump");
+                if (doubleJump)
+                {
+                    anim.SetTrigger("doubleJump");
+                }
+
+                doubleJump = !doubleJump;
+            }
+        }
+
+
+        if (rb.velocity.y < 0)
+        {
+            anim.SetBool("isFalling", true);
+        }
+        else
+        {
+            anim.SetBool("isFalling", false);
         }
     }
 

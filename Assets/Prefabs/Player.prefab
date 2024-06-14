@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 6360249262393880705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.036, z: 0}
+  m_LocalPosition: {x: 0, y: -1.019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 704136107488742008}
   - component: {fileID: 1537441802598437097}
   - component: {fileID: 1000585804194527176}
-  - component: {fileID: 3381273588612758766}
+  - component: {fileID: 4517008540998527015}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd00e5b522e86d04d86a4eb133387774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpForce: 15
+  speed: 15
+  jumpForce: 20
   groundCheck: {fileID: 3084267089649659128}
   groundLayer:
     serializedVersion: 2
@@ -199,8 +199,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &3381273588612758766
-BoxCollider2D:
+--- !u!70 &4517008540998527015
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -231,16 +231,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04030323, y: -0.2631817}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1483746, y: 1.4399285}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.058632374, y: -0.27641225}
+  m_Size: {x: 1.0339537, y: 1.4471755}
+  m_Direction: 0

@@ -34,6 +34,6 @@ public class CoinUI : MonoBehaviour
 
     private void UpdateTextCoin()
     {
-        textCoin.text = coin.ToString();
+        textCoin.text = "SCORE: " + coin.ToString();
     }
 }

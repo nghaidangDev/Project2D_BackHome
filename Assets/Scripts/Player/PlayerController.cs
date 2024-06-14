@@ -8,8 +8,11 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
-            CoinUI.instance.AddCoin(1);
+            CoinUI.instance.AddCoin(100);
             Destroy(collision.gameObject);
+        }else if (collision.gameObject.CompareTag("Trap"))
+        {
+            HealthBarUI.instance.TakeDamage(20);
         }
     }
 }

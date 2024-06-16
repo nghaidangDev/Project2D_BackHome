@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Trap
+  - WinPoint
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 326489665
+    locked: 0
+  - name: Item
+    uniqueID: 1176664379
     locked: 0

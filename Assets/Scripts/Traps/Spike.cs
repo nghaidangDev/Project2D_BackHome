@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            HealthBarUI.instance.TakeDamage(20);
+            if (HealthBarUI.instance.currentHealth <= 0)
+            {
+                PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+                Destroy(playerMovement.gameObject);
+            }
+        }
     }
 }

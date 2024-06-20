@@ -324,7 +324,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 137280141}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489691681}
+        m_TargetAssemblyTypeName: MainController, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level_02
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &137280141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +456,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 144467151}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489691681}
+        m_TargetAssemblyTypeName: MainController, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level_01
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &144467151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +1042,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72babe229fe374285b1f72ba0e4b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playPanel: {fileID: 1746108199}
+  btnPlay: {fileID: 924063210}
+  btnPlay_Exit: {fileID: 93963430}
 --- !u!1 &705097619
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,13 @@ public class UIController : MonoBehaviour
     [Header("Win Game")]
     [SerializeField] private Image winImg;
 
+    [Header("Pause Button")]
+    [SerializeField] private Image pausePanel;
+    [SerializeField] private Button pauseBtn;
+    [SerializeField] private Button backBtn;
+    [SerializeField] private Button pauseBtn_restart;
+    [SerializeField] private Button volumeBtn;
+
     private void Awake()
     {
         if (instance == null)
@@ -28,6 +35,8 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         restartBtn.onClick.AddListener(RestartGame);
+        pauseBtn.onClick.AddListener(PauseGame);
+        pauseBtn_restart.onClick.AddListener(PauseGame_Restart);
     }
 
     private void Update()
@@ -51,5 +60,15 @@ public class UIController : MonoBehaviour
     public void WinGame()
     {
         winImg.gameObject.SetActive(true);
+    }
+
+    private void PauseGame()
+    {
+        pausePanel.gameObject.SetActive(true);
+    }
+    
+    private void PauseGame_Restart()
+    {
+        pausePanel.gameObject.SetActive(false);
     }
 }

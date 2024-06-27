@@ -53,6 +53,7 @@ public class RockHead : MonoBehaviour
             if (distancePlayer < 1.5f)
             {
                 HealthBarUI.instance.TakeDamage(100);
+                PlayerMovement.Destroy(player);
             }
         }
     }
